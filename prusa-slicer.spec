@@ -24,16 +24,6 @@ URL:            https://github.com/prusa3d/PrusaSlicer/
 Source0:        https://github.com/prusa3d/PrusaSlicer/archive/version_%version.tar.gz
 Source2:        %name.appdata.xml
 
-Patch1:         prusa-slicer-no-cereal-lib.patch
-
-# Beware!
-# Patches >= 340 are only applied on Fedora 34+
-# Patches >= 350 are only applied on Fedora 35+
-# ...
-
-# OpenEXR 3 fixes
-Patch351:       https://github.com/archlinux/svntogit-community/blob/1dea61c0b5/trunk/prusa-slicer-openexr3.patch
-
 # Highly-parallel uild can run out of memory on PPC64le
 %ifarch ppc64le
 %global _smp_ncpus_max 8
